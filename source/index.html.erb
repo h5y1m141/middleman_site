@@ -1,0 +1,13 @@
+---
+title: Middlemanサンプル
+---
+<% blog.articles[0...5].each do |article| %>
+  <article>
+    <h3>
+      <a href="<%= article.url %>"><%= article.title %></a>
+      <time><%= article.date.strftime('%Y年%m月%d日') %></time>
+    </h3>
+    <%= article.summary %>
+    <a href="<%= article.url %>">もっと読む</a>
+  </article>
+<% end %>
